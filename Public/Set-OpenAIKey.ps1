@@ -10,6 +10,7 @@ function Set-OpenAIKey {
         Specifies OpenAI API Key secure string.
         .EXAMPLE
         Set-OpenAIKey -Key (Get-Secret -Name MyOpenAIKey)
+        Set-OpenAIKey -Key (ConvertTo-SecureString MyOpenAIKey -AsPlainText -Force)
     #>
     [CmdletBinding()]
     param(
